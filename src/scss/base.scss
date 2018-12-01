@@ -1,0 +1,53 @@
+@import url('stylesheet.scss');
+@import 'card-style.scss';
+@import 'input_style.scss';
+@import 'bottom_btn.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #343d46;
+  box-sizing: border-box;
+
+  .slider {
+    margin: 25px auto 0;
+    width: 1440px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+
+    .card-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      position: absolute;
+      transition: .4s;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      -ms-transition: .4s;
+      -o-transition: .4s;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 1440px) {
+	body .slider {
+		width: 720px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+	body .slider {
+		width: 360px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+	body .slider {
+		margin: 0 auto;
+  }
+}
