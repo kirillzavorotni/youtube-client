@@ -1,0 +1,89 @@
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
+.input-wrapp {
+  max-width: 1200px;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 0 30px;
+
+  .button-search {
+    width: 20px;
+    height: 20px;
+    background-image: url('../fonts/search-solid.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    left: 10px;
+    top: 1px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .search {
+    display: block;
+    width: 1400px;
+    height: 40px;
+    font-size: 20px;
+    outline: 0;
+    border: none;
+    padding: 0 15px 0 45px;
+    position: relative;
+    left: -25px;
+    z-index: 0;
+    @include border-radius(20px);
+  }
+}
+
+.focus-on {
+  box-shadow: inset 0 0 5px #000;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+}
+
+.focus-off {
+  box-shadow: none;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+}
+
+@media screen and (max-width: 1440px) {
+	.input-wrapp .search {
+		width: 600px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+	.input-wrapp .search {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+	.input-wrapp {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+
+    .button-search {
+      display: none;
+    }
+
+    .search {
+      width: 100%;
+      padding: 0 15px 0;
+      left: auto;
+    }
+  }
+}

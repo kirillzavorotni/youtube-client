@@ -1,0 +1,56 @@
+.btn-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+
+  .btn-nav__btn {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 0 10px;
+    position: relative;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    .btn__indicate {
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      font-size: 15px;
+      background-color: #cb3131;
+      color: #fff;
+      text-align: center;
+      line-height: 22px;
+    }
+  }
+
+  .btn-nav__btn:nth-child(3) {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btn-nav__btn:nth-child(2n) {
+    width: 13px;
+    height: 13px;
+  }
+}
